@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Night for Anisa ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Poppins:wght@300;400;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <section id="hero" class="section dark-bg">
+        <div class="content center-text">
+            <p class="pre-title">Sebuah Ruang Kecil, Di Penghujung Hari</p>
+            <h1 id="heroTitle" class="aesthetic-title glows" style="min-height: 1.2em;"></h1>
+            <p class="subtitle puitis">"Sengaja datang paling akhir, untuk menutup harimu yang panjang..."</p>
+            <button id="fireworksBtn" class="btn-aesthetic rose-gold">Klik Duluuu</button>
+            <div class="scroll-down"><span></span></div>
+        </div>
+    </section>
+
+    <section id="message" class="section soft-bg">
+        <div class="content">
+            <h2 class="section-title">Detak Jeda...</h2>
+            <div class="message-box shadow-box puitis">
+                <p id="typed-text"></p> <p class="signature">- Taufik</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="music" class="section dark-bg">
+        <div class="content center-text">
+            <h2 class="section-title text-gold">Anisa's Midnight Playlist 🌙</h2>
+            
+            <div class="spotify-container">
+                <div class="spotify-player">
+                    <div class="album-art-wrapper">
+                        <img id="coverImg" src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=300" alt="Album Art">
+                    </div>
+                    <div class="song-info">
+                        <h3 id="songTitle">Judul Lagu</h3>
+                        <p id="songArtist">Penyanyi</p>
+                    </div>
+                    
+                    <audio id="audioElement" src=""></audio>
+                    
+                    <div class="progress-container">
+                        <span id="currentTime">0:00</span>
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <span id="duration">0:00</span>
+                    </div>
+
+                    <div class="controls">
+                        <button id="prevBtn"><i class="fas fa-step-backward"></i></button>
+                        <button id="playBtn" class="play-btn-main"><i class="fas fa-play"></i></button>
+                        <button id="nextBtn"><i class="fas fa-step-forward"></i></button>
+                    </div>
+                </div>
+                
+                <div class="playlist-sidebar">
+                    <h4>Up Next</h4>
+                    <ul id="playlistList">
+                        <li data-index="0" class="active">1. Kunto Aji - Rehat</li>
+                        <li data-index="1">2. Runtuh - Feby Putri feat. Fiersa Besari</li>
+                        <li data-index="2">3. Hindia ft. Rara Sekar - Membasuh </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section soft-bg">
+        <div class="content center-text">
+            <h2 class="section-title">Galeri Estetik (Bohong) 📸</h2>
+            <p class="subtitle hand-written">Awas ngamuk ya kak liat ini wkwk. (Klik foto untuk gedein)</p>
+            
+            <div class="photo-grid">
+                <div class="polaroid-wrapper">
+                    <div class="polaroid sparkle-hover">
+                        <img src="foto1.jpg" alt="Foto Iseng 1" class="gallery-item">
+                        <p class="caption">Muka pas lagi nahan emosi 🤣</p>
+                    </div>
+                </div>
+                <div class="polaroid-wrapper">
+                    <div class="polaroid sparkle-hover">
+                        <img src="foto2.jpg" alt="Foto Iseng 2" class="gallery-item">
+                        <p class="caption">Katanya mau estetik, malah blur ✌️</p>
+                    </div>
+                </div>
+                <div class="polaroid-wrapper">
+                    <div class="polaroid sparkle-hover">
+                        <img src="foto3.jpg" alt="Foto Iseng 3" class="gallery-item">
+                        <p class="caption">Capek ya kak? Sama wkwk 😭</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vouchers" class="section soft-bg">
+        <div class="content center-text">
+            <h2 class="section-title">Kupon Spesial Buat Kak Anisaa 🎟️</h2>
+            <p class="subtitle puitis">Karena Kak Anisa partner yang luar biasa, ini sedikit 'reward' yang bisa ditagih.</p>
+            
+            <div class="voucher-grid">
+                <div class="voucher-card">
+                    <h3>☕ Kupon Kopi/Matcha</h3>
+                    <p>Bebas pilih, biar energi balik lagi pas lagi mumet.</p>
+                    <button class="btn-claim" onclick="claimVoucher(this, 'Kopi/Matcha')">Klaim Kupon</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>🗣️ Bebas Judgement</h3>
+                    <p>Valid 24/7. Telinga siap mendengar tanpa nge-judge.</p>
+                    <button class="btn-claim" onclick="claimVoucher(this, 'Curhat')">Klaim Kupon</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>🆘 Bebas Minta Tolong 1x</h3>
+                    <p>Apapun itu (selama masuk akal wkwk). Cuma berlaku 1x ya!</p>
+                    <button class="btn-claim" onclick="claimVoucher(this, 'Minta Tolong')">Klaim Kupon</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="make-a-wish" class="section dark-bg" style="position: relative; overflow: hidden;">
+        <div class="content center-text">
+            <h2 class="section-title text-gold">Make a Wish 🌠</h2>
+            <p class="subtitle puitis">"Tulis harapan Kak Anisa di umur yang baru, biarkan semesta yang mengaminkannya..."</p>
+            
+            <div class="wish-container">
+                <textarea id="wishInput" placeholder="Ketik harapan Kak Anisa di sini..." rows="4"></textarea>
+                <br>
+                <button id="wishBtn" class="btn-aesthetic rose-gold">Terbangkan Harapan 🚀</button>
+            </div>
+            <div id="wishMessage" class="wish-success puitis"></div>
+        </div>
+        <div id="shootingStarContainer" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none;"></div>
+    </section>
+
+    <section id="closing" class="section dark-bg">
+        <div class="content center-text glowing-gold">
+            <h2 class="aesthetic-title final">Selamat Ulang Tahun.</h2>
+            <p class="closing-text puitis">"Teruslah bersinar dengan caramu sendiri Kak.<br>Dunia beruntung memilikimu."</p>
+            <p class="signature-final">Specialy made by Taufik</p>
+        </div>
+    </section>
+    
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div id="lightboxCaption" class="lightbox-caption hand-written"></div>
+    </div>
+
+    <audio id="hbdAudio" src="lagu-hbd.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
