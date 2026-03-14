@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // === 3. LOGIKA TYPEWRITER MESSAGE ===
-    const message = Sengaja ngucapinnya malam-malam... Biar orang-orang berlomba jadi yang pertama menyambut hari bahagiamu, .tapi izinkan aku jadi yang terakhir menutupnya, karena aku cuma pengen memastikan hari Kak Anisa yang spesial ini benar-benar ditutup dengan senyum. Terima kasih sudah jadi partner yang luar biasa hebat, sabar, dan selalu ngasih energi terbaik walau situasinya kadang nggak ramah. Aku saksi betapa besar dedikasimu. Semoga panjang umur, selalu dikasih kesehatan buat ngejar semua mimpi-mimpinya, dan makin dilancarkan segala urusannya. Semoga di usia ini, Kak Anisa menemukan ketenangan hati, dikelilingi hal-hal yang menghargai value-mu, dan bahagia seutuhnya. You deserve it, Kak. Selamat istirahat ya.";
+    const message = "Sengaja ngucapinnya malam-malam... Biar orang-orang berlomba jadi yang pertama menyambut hari bahagiamu, .tapi izinkan aku jadi yang terakhir menutupnya, karena aku cuma pengen memastikan hari Kak Anisa yang spesial ini benar-benar ditutup dengan senyum. Terima kasih sudah jadi partner yang luar biasa hebat, sabar, dan selalu ngasih energi terbaik walau situasinya kadang nggak ramah. Aku saksi betapa besar dedikasimu. Semoga panjang umur, selalu dikasih kesehatan buat ngejar semua mimpi-mimpinya, dan makin dilancarkan segala urusannya. Semoga di usia ini, Kak Anisa menemukan ketenangan hati, dikelilingi hal-hal yang menghargai value-mu, dan bahagia seutuhnya. You deserve it, Kak. Selamat istirahat ya";
     const typedTextElement = document.getElementById("typed-text");
     let index = 0;
     let isTypewriterStarted = false;
